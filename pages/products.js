@@ -1,13 +1,17 @@
 import React from 'react'
 import Header from '../components/header/index.js'
+import { fetchwooCommerceProducts } from '../api/woocommerceApi'
 
 
-function Products() {
+
+
+import React from 'react'
+fetchwooCommerceProducts()
+
+function products() {
   return (
-    <div>
-        <Header/>
-        Products</div>
+    <div>products</div>
   )
 }
 
-export default Products
+export default products

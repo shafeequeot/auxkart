@@ -52,12 +52,12 @@ function Header() {
         </div>
 
         </div>
-        <div className='bg-white h-8 items-center shadow-lg w-screen flex flex-row gap-8 justify-center'>
-            <Menu text="home" link="/"/>
-            <Menu text="Kart" link="/kart"/>
-            <Menu text="Checkout" link="/checkout"/>
-            <Menu text="My Account" link="/Account"/>
-            <Menu text="Shop" link="/shop"/>
+        <div className='bg-white h-10 items-center shadow-lg w-screen flex flex-row gap-8 justify-center border border-gray-200'>
+            <Menu text="home" links="/"/>
+            <Menu text="Kart" links="/kart"/>
+            <Menu text="Checkout" links="/checkout"/>
+            <Menu text="My Account" links="/Account"/>
+            <Menu text="Shop" links="/shop"/>
         </div>
 
     </div>

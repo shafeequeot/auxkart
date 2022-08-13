@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/header/index.js'
+import Banner from '../components/home/banner.js'
+import Icons from '../components/home/icons.js'
+import PopularItems from '../components/common/popularProduct'
 
 export default function Home() {
   return (
@@ -11,12 +13,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header>
+      <Header/>
 
-      </Header>
 
-      <main className="">
-        
+
+      <main className="container mx-auto flex flex-col gap-4">
+        <Banner/>
+        <Icons/>
+        <PopularItems/>
       </main>
 
       <footer className="{styles.footer}">
