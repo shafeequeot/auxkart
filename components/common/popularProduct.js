@@ -1,5 +1,5 @@
 import React from 'react'
-import Products from '../common/Products'
+import Products from '../common/productGrid'
 function PopularProducts() {
   return (
     <div className='grid grid-cols-6 gap-4'>

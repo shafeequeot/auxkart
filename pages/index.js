@@ -2,9 +2,10 @@ import Head from 'next/head'
 import Header from '../components/header/index.js'
 import Banner from '../components/home/banner.js'
 import Icons from '../components/home/icons.js'
-import PopularItems from '../components/common/popularProduct'
+import Products from '../components/common/productGrid'
+import axios from 'axios'
 
-export default function Home() {
+export default function Home({products}) {
   return (
     <div >
         <Head>
@@ -20,7 +21,7 @@ export default function Home() {
       <main className="container mx-auto flex flex-col gap-4">
         <Banner/>
         <Icons/>
-        <PopularItems/>
+        <Products products= {products}/>
       </main>
 
       <footer className="{styles.footer}">
@@ -29,3 +30,12 @@ export default function Home() {
     </div>
   )
 }
+
+
+export async function getStaticProps(){
+  const {data : products}  = await axios.get( `${process.env.FRONT_END_URL}/api/wooproducts`)
+  return{
+      props:  products || {},
+      revalidate: 1,
+  }
+} 
